@@ -1,0 +1,220 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 1.45rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: gray; 
+}
+
+.container {
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
+  margin: 0 auto; /* Untuk mengatur gambar di tengah secara horizontal */
+}
+
+.nama {
+    padding-top: 20px;
+    margin: 10px 0;
+    color: white;
+    font-size: 2rem;
+}
+
+p {
+    padding-top: 10px;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.second-section {
+    background-color: oldlace;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+     rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+  color: coral;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  color: black;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  
+}
+
+.content .heading {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.content .para {
+  line-height: 1.5;
+}
+
+.content .btn {
+  color: aquamarine;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover::before {
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: none;
+}
+
+.card:hover .btn {
+  color: #212121;
+  background: #e8e8e8;
+}
+
+.content .btn:hover {
+  outline: 2px solid #e8e8e8;
+  background: transparent;
+  color: #e8e8e8;
+}
+
+.content .btn:active {
+  box-shadow: none;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.info {
+  font-size: 1em;
+  font-weight: 900;
+  text-align: left;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid coral;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+     rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+  color: coral;
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+     bisque 40%, rgb(255, 185, 160) 78%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+footer {
+  text-align: center;
+  background-color: #333; /* Ganti dengan warna latar belakang yang Anda inginkan */
+  color: #fff; /* Warna teks */
+  padding: 20px;
+}
+
+.social-icons {
+  font-size: 24px; /* Ukuran ikon */
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff; /* Warna ikon */
+  margin: 0 10px; /* Jarak antara ikon */
+  text-decoration: none;
+}
+
+/* Styling tambahan jika Anda ingin mengubah ikon Font Awesome */
